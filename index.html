@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Calculator app</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body id="themeBody">
+
+  <div class="container">
+
+    <div class="header">
+
+      <p id="heading">calc</p>
+
+      <div class="themeToggle">
+
+        <p id="themeToggleTitle">theme</p>
+
+        <div class="themeBtns">
+
+          <div class="toggleBtnLabelDiv">
+            <label for="toggleBtn1" class="themeToggleLabel">1</label>
+            <label for="toggleBtn2" class="themeToggleLabel">2</label>
+            <label for="toggleBtn3" class="themeToggleLabel">3</label>
+          </div>
+
+          <div class="toggleBtnDiv">
+            <input type="radio" class="themeToggleBtn" id="toggleBtn1" name="theme" checked>
+            <input type="radio" class="themeToggleBtn" id="toggleBtn2" name="theme">
+            <input type="radio" class="themeToggleBtn" id="toggleBtn3" name="theme">
+          </div>
+          
+        </div>
+
+      </div>
+
+    </div>
+
+    <input id="display" readonly>
+
+    <div class="calculator">
+
+      <div class="calculatorKeys">
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button onclick="deleteContent()" id="deleteBtn">DEL</button>
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button onclick="appendToDisplay('+')">+</button>
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button onclick="appendToDisplay('-')">-</button>
+        <button onclick="appendToDisplay('.')">.</button>
+        <button onclick="appendToDisplay('0')">0</button>
+        <button onclick="appendToDisplay('/')">/</button>
+        <button onclick="appendToDisplay('*')">x</button>
+      </div>
+
+      <div class="bottomKeys">
+        <button onclick="resetDisplay('')" id="resetBtn">reset</button>
+        <button onclick="calculate('=')" id="calculateBtn">=</button>
+      </div>
+    
+    </div>
+
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
+    Coded by <a href="https://github.com/amank037">Aman</a>
+  </div>
+</body>
+<script src="script.js"></script>
+</html>
